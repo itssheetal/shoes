@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Leather Shoes - 70 Years of Craftsmanship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; color: #2C2C2C; line-height: 1.6; background: #F5F5DC; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; }
+
+        /* Header */
+        header { position: sticky; top: 0; background: #2C2C2C; color: #F5F5DC; padding: 1rem; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+        .logo { font-size: 1.5rem; font-weight: 700; }
+        nav ul { list-style: none; display: flex; gap: 1rem; }
+        nav a { color: #F5F5DC; transition: color 0.3s; }
+        nav a:hover { color: #D4AF37; }
+        .mobile-menu { display: none; cursor: pointer; }
+        .cart { font-size: 1.2rem; }
+
+        /* Hero Section */
+        .hero { background: url('https://source.unsplash.com/featured/?leather-shoes') center/cover no-repeat; height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #F5F5DC; position: relative; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); }
+        .hero-content { position: relative; z-index: 1; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; }
+        .btn { padding: 0.75rem 1.5rem; background: #D4AF37; color: #2C2C2C; border: none; cursor: pointer; transition: background 0.3s; }
+        .btn:hover { background: #B87333; }
+        .trust-strip { background: #2C2C2C; color: #F5F5DC; padding: 0.5rem; text-align: center; }
+
+        /* Featured Collections */
+        .collections { padding: 2rem; background: #F5F5DC; }
+        .collections h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+        .product-card { background: #FFF; border: 1px solid #DDD; padding: 1rem; text-align: center; transition: transform 0.3s; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-card img { width: 100%; height: 200px; object-fit: cover; }
+        .badge { background: #D4AF37; color: #2C2C2C; padding: 0.25rem; font-size: 0.8rem; }
+
+        /* Heritage Section */
+        .heritage { padding: 2rem; background: #2C2C2C; color: #F5F5DC; display: flex; align-items: center; }
+        .heritage img { width: 50%; margin-right: 2rem; }
+        .heritage-content { flex: 1; }
+        .heritage h2 { margin-bottom: 1rem; }
+
+        /* Testimonials */
+        .testimonials { padding: 2rem; background: #F5F5DC; }
+        .testimonials h2 { text-align: center; margin-bottom: 2rem; }
+        .slider { display: flex; overflow: hidden; }
+        .slide { min-width: 100%; padding: 1rem; text-align: center; }
+        .dots { text-align: center; margin-top: 1rem; }
+        .dot { display: inline-block; width: 10px; height: 10px; background: #DDD; margin: 0 5px; cursor: pointer; }
+        .dot.active { background: #D4AF37; }
+
+        /* Newsletter */
+        .newsletter { padding: 2rem; background: #2C2C2C; color: #F5F5DC; text-align: center; }
+        .newsletter h2 { margin-bottom: 1rem; }
+        .newsletter form { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
+        .newsletter input { padding: 0.5rem; width: 250px; }
+
+        /* Footer */
+        footer { background: #2C2C2C; color: #F5F5DC; padding: 2rem; text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem; }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .mobile-menu { display: block; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .cta-buttons { flex-direction: column; }
+            .heritage { flex-direction: column; }
+            .heritage img { width: 100%; margin-bottom: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Premium Leather Shoes</div>
+        <nav>
+            <ul>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#craft">Craftsmanship</a></li>
+                <li><a href="#stores">Stores</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+        <div class="cart">🛒</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Premium Leather Shoes Crafted for 70 Years</h1>
+            <p>From our offline ateliers to your doorstep. Experience handcrafted leather footwear with futuristic comfort.</p>
+            <div class="cta-buttons">
+                <button class="btn">Shop Men’s</button>
+                <button class="btn">Shop Women’s</button>
+            </div>
+            <a href="#story" class="btn">Explore Our Legacy</a>
+        </div>
+    </section>
+    <div class="trust-strip">Handcrafted - Since 1954 - Free Shipping Across India - Easy Exchanges</div>
+
+    <!-- Featured Collections -->
+    <section id="collections" class="collections">
+        <h2>Featured Collections</h2>
+        <div class="grid">
+            <div class="product-card">
+                <img src="https://source.unsplash.com/featured/?oxford-shoes" alt="Classic Oxfords">
+                <h3>Classic Oxfords</h3>
+                <p>₹12,000</p>
+                <button class="btn">View Details</button>
+            </div>
+            <div class="product-card">
+                <img src="https://source.unsplash.com/featured/?brogues" alt="Brogues & Derbies">
+                <h3>Brogues & Derbies</h3>
+                <p>₹14,000</p>
+                <span class="badge">Best Seller</span>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://source.unsplash.com/featured/?loafers" alt="Loafers">
+                <h3>Loafers</h3>
+                <p>₹10,000</p>
+                <span class="badge">New Arrival</span>
+                <button class="btn">View Details</button>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </section>
+
+    <!-- Heritage & Craftsmanship -->
+    <section id="craft" class="heritage">
+        <img src="https://source.unsplash.com/featured/?leather-workshop" alt="Artisan Workshop">
+        <div class="heritage-content">
+            <h2>70 Years of Master Craftsmanship</h2>
+            <p>Handpicked premium leather from top tanneries. Emphasis on hand-finishing with minimal machines.</p>
+            <ul>
+                <li>Handcrafted in small batches</li>
+                <li>Full-grain leather uppers</li>
+                <li>Comfort-focused insoles</li>
+                <li>Built to age beautifully, not wear out</li>
+            </ul>
+            <button class="btn">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>Customer Testimonials</h2>
+        <div class="slider" id="slider">
+            <div class="slide">
+                <p>“Wearing their shoes for 15+ years. The leather only gets better with time.”</p>
+                <cite>- Rajesh K., Mumbai</cite>
+            </div>
+            <div class="slide">
+                <p>“From boutique to online, the quality remains unmatched.”</p>
+                <cite>- Priya S., Delhi</cite>
+            </div>
+            <!-- Add more slides -->
+        </div>
+        <div class="dots" id="dots"></div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>Join the Leather Legacy Club</h2>
+        <p>Early access to limited editions, leather care tips, and exclusive offers.</p>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button class="btn">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#shop">Shop</a>
+            <a href="#collections">Collections</a>
+            <a href="#story">Our Story</a>
+            <a href="#craft">Craftsmanship</a>
+            <a href="#stores">Stores</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p>&copy; 2024 Premium Leather Shoes. 70 Years of Craftsmanship.</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Testimonial Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('dots');
+        slides.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => showSlide(i));
+            dotsContainer.appendChild(dot);
+        });
+        function showSlide(index) {
+            slides.forEach((slide, i) => slide.style.display = i === index ? 'block' : 'none');
+            document.querySelectorAll('.dot').forEach((dot, i) => dot.classList.toggle('active', i === index));
+            currentSlide = index;
+        }
+        setInterval(() => showSlide((currentSlide + 1) % slides.length), 5000); // Auto-slide every 5s
+    </script>
+</body>
+</html>
